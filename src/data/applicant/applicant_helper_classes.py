@@ -16,7 +16,7 @@ class Education:
         self.highest_DL = highest_DL
         self.hDL_institution = hDL_institution
         self.degree_field = degree_field
-        self.gpa = gpa
+        self.gpa = gpa #REF
         self.start_date = start_date
         self.end_date = end_date
         self.is_completed = is_completed 

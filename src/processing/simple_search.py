@@ -1,45 +1,74 @@
+from data.helper_classes import *
 '''
-TODO: 
+    FUNCTIONALITY REQUIREMENTS:
 
-    FUNCTIONALITY REQUIREMENT:
     REQ-A: Applicants should be able to search for jobs. Since each Employer may only post 1 job, Applicants are essentially searching in the 
-    subspace of Employers. Regardless of how this is implemented, it should be a useful tool for helping Applicants to sift through all 
-    of the Employers who have posted jobs on the platform and try to find jobs that match their preferences and profile.
+        subspace of Employers. Regardless of how this is implemented, it should be a useful tool for helping Applicants to sift through all 
+        of the Employers who have posted jobs on the platform and try to find jobs that match their preferences and profile.
 
     REQ-B: Employers should be able to search for Applicants. This would allow Employers to reach out to these Applicants to encourage them to 
         apply for their job posting. Regardless of how this is implemented, it should be a useful tool for helping Employers to search for and
         find Applicants that would be a good fit for their job posting based on the job's requirements and description.
 
-    STUDENT IMPLEMENTATION:
-    Two possibilities, we could ask students to implement these or fill them in for them.
+    STEP 5-A:
+        For this task you will need to choose how to implement simple search for applicants and employers. In addition to the data classes
+        you've already looked at, we've provided most of the implementation for simple search below. Your task is to choose between two methods
+        of implementation: keyword search and full-text search. Be sure to think about --why-- you're making the choice you are and consider
+        what it will mean for different types of users and the power dynamics present on a hiring/jobs platform. You will need to select a 
+        method for both the applicant search and the employer search, they do --not-- need to be the same.
 
-    OPTION 1: FILL IN FOR THEM
-        Fill this in with the simple search methods that we will not ask students to implement which
-        are currently labeled functionality requirements A and C. 
-            A: Allow applicants to search for jobs
-            B: Allow employers to search for applicants
+        KEYWORD SEARCH: There is map (or dictionary) of different categories of keyword to filter the search results by and pre-selected values
+                        for those categories that users can click on to filter their search results. To search, users pick value(s) for whichever
+                        categories they want to filter by, press enter, and receive results that match their search.
 
-        The idea is that instead of giving students too much information in the document itself on how to provide code for this
-        assignment and where to "real" code and where to pseudocode, we can provide this as a concrete example for them to refer
-        back to.
+                        Challenges/Considerations: 
+                            - Could we accidentally filter out jobs by having limited values for the keyword categories?
+                            - Is the list of keywords fixed or should we intelligently generate them?
+                            - Do we create keywords using data from the existing applicants/employers on the platform?
+                            - Who supplies the keywords?
 
-    OPTION 2: ASK TO IMPLEMENT
-        This could still serve as an "intro" to the assignment and a first step to get the thinking about the different 
-        kinds of SRC challenges present in these data collection and processing choices for the rest of assignment. 
-        To cut down on work load a little and have this serve as the "intro" part, we could supply students with options
-        to choose from, rather than allowing them total freedom to prevent them from going off the deep end and demonstrate
-        the kinds of questions we're trying to wrestle with.
+        FULL-TEXT SEARCH: Users simply enter a query into a search bar, stop words are filtered out, and then the search is matched against the
+                          text of data for Applicants or Employees for similarity. Most relevant results as determined by term frequency/relevancy
+                          to the prompt as returned.
 
-        I think this might be especially interesting if students have to consider whether the employer side search
-        should be more limited than the applicant side search. (Essentially how do we manage the power dynamics between
-        employers and applicants in the functionality of the tooling we provide them?)
-
-        Could allow them to choose between:
-        1) keyword search 
-            - Challenges with what keywords to allow, could we accidentally filter out jobs?
-            - Fixed list of keywords or allow user-generated ones as well?
-            - Do we create keywords using some of the employer/job data?
-        2) user-generated "classic" search query of job descriptions/titles
-            - What if users miss out on jobs because of bad searches or bad descriptions/titles?
-
+                          Challenges/Considerations
+                            - What if users miss out because of bad searches or bad descriptions/titles?
+                            - Is there anything we won't allow users to search for?
+                            - What data will we use to match queries on? 
+                                - Is there any way for users to disallow the use of certain data?
 '''
+class SimpleSearch:
+
+    APPLICANT_SEARCH_KEYWORD_DICT = {
+        "field" : ["Medicine", "Tech", "Business", "Finance", "Law", "Administration", "Education", "Other"],
+        "type" : ["Volunteer", "Internship", "Part-Time", "Full-Time", "Other"],
+        "salary" : ["< 30k", "30k - 50k", "50k - 80k", "80k - 120k", "120k - 200k", "200k+"],
+        "distance" : ["1 mile" "1-5 miles", "5-10 miles", "10-20 miles", "20-50 miles", "50+ miles"],
+        "company_size" : ["100 or fewer employees", "100-500 employees", "500-1500 employees", "1500 - 5000 employees", "5000 - 10000 employees", "10000+ employees"],
+        "degree_level" : ["below highschool", "highschool diploma", "associates degree", "bachelors degree", "masters", "phd and above"]
+    }
+
+    EMPLOYER_SEARCH_KEYWORD_DICT = {
+        "field" : ["Medicine", "Tech", "Business", "Finance", "Law", "Administration", "Education", "Other"],
+        "years_of_experience" : ["0-1", "2-5", "5-9", "10+"],
+        "degree_level" : ["below highschool", "highschool diploma", "associates degree", "bachelors degree", "masters", "phd and above"],
+        "distance" : ["1 mile" "1-5 miles", "5-10 miles", "10-20 miles", "20-50 miles", "50+ miles"],
+    }
+
+
+    #TODO: Fill in the 
+    def do_keyword_search(self, ___):
+        results = ...
+        return results
+
+    def do_full_text_search(self, ___):
+        results = ...
+        return results
+
+    #TODO: Choose either keyword or full text for the search feature applicants will use to search for employers/jobs to satisfy REQ-A
+    def applicant_search_for_employer(self, applicant : Applicant, all_employers : list[Employer]):
+        pass
+
+    #TODO: Choose either keyword or full text for the search feature employers will use to search for applicants to satisfy REQ-B
+    def employer_search_for_applicants(self, employer : Employer, all_potential_applicants : list[Applicant]):
+        pass
