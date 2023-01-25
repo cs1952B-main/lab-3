@@ -3,7 +3,7 @@ from helper_classes import *
 
 '''
     The employer class represents an employer with a single job posting on the HireSense platform. This class is a container for the 
-    information about the job like title, field, salary, job description etc. While a Company may have multiple Employers within in it
+    information about the job like title, field, salary, job description etc. While a Company may have multiple Employers within it,
     each Employer may only post one job at a time on the platform for simplicity's sake. In short, you can think of an Employer as a 
     manager of a small team that has a role to fill within a larger company or within a small business.
 
@@ -19,4 +19,5 @@ class Employer:
         self.company = company
         self.salary = salary
         self.job_description = job_desc
+        self.job_requirements = job_req
         self.applicants = applicants
