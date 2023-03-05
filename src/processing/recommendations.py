@@ -16,10 +16,10 @@ TODO:
         on your written questions later on. 
 
         You'll want to think about what Applicant and Employer data to use in your recommendations. What best represents reality? 
-        Could using certain data points open the door for discrimination? Could your algorithm reflect an unfair bias? Then you'll want 
+        Could using certain data points open the door for discrimination? Could your algorithm reflect an unfair bias? Next you'll want 
         to choose a method for the recommendation system, we've provided a few ideas for you to choose from, though you may use something 
-        else as long as it's clear from your code how the system establishes connections between data points, what data points is it using,
-        and whether these recommendations are based solely on each user's data, based solely on similar user's data, or both.
+        else as long as it's clear from your code how the system establishes connections between data points, what data points it is using,
+        and whether these recommendations are based solely on each user's data, based solely on similar users' data, or both.
 
         Some potential recommendation algorithms to explore:
 

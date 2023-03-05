@@ -7,7 +7,7 @@ from applicant.applicant_helper_classes import *
     Demographics - personal categorical data; ex) gender, race, age... etc
     Education - highest level of degree achieved and additional details about that degree
     WorkExperience - list of past work experiences with relevant details about field, type, start/end dates
-    Preferences - a data class to encapsulate job search preferences of the applicant field, type, salary, etc ... TODO: Update this description if we decide to let students fill in prefs
+    Preferences - a data class to encapsulate job search preferences of the applicant field, type, salary, etc
     ApplicationsSent - a wrapper class around a set of applications sent by the applicant
 '''
 class Applicant:
