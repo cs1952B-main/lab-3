@@ -13,4 +13,4 @@ for different types of information included in the Applicant profile
 
 ## Processing Files
 
-The processing files are located in src -> processing. These are the files represent the majority of the part of the assignment students will be interacting with. There are 4 files that correspond to different functionality requirements or pairs of functionality requirements. Each file presently contains a detailed comment outlining the requirement and plans or potential plans for future development.
+The processing files are located in src -> processing. These are the files represent the majority of the part of the assignment you will be interacting with. There are 3 files that correspond to different functionality requirements or pairs of functionality requirements. Each file presently contains a detailed comment outlining the requirement and helpful hints and ideas to help you get started.

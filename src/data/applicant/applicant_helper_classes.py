@@ -2,12 +2,12 @@ from enum import Enum
 from helper_classes import *
 
 class Demographics:
-    def __init__(self, age, gender, race, ethnicity, orientation, marital_status, country_of_residence):
+    def __init__(self, age, gender, race, ethnicity, sexual_orientation, marital_status, country_of_residence):
         self.age = age
         self.gender = gender
         self.race = race
         self.ethnicity = ethnicity
-        self.orientation = orientation
+        self.sexual_orientation = sexual_orientation
         self.marital_status = marital_status
         self.country_of_residence = country_of_residence
 
@@ -16,7 +16,7 @@ class Education:
         self.highest_DL = highest_DL
         self.hDL_institution = hDL_institution
         self.degree_field = degree_field
-        self.gpa = gpa #REF
+        self.gpa = gpa
         self.start_date = start_date
         self.end_date = end_date
         self.is_completed = is_completed 
@@ -38,7 +38,6 @@ class WorkExperience:
         self.work_history.append(experience)
         self.work_history.sort(key = lambda ex : ex.start_date) #sorts work_history by start date
 
-#TODO: Determine if this is a good class to let students fill in/choose the data for!
 class Preferences:
     def __init__(self, salary, location, field, years_of_ex, type : JobType, target_companies : list[Company]):
         self.salary = salary

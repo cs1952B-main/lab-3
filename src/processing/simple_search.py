@@ -10,7 +10,7 @@ from data.helper_classes import *
         apply for their job posting. Regardless of how this is implemented, it should be a useful tool for helping Employers to search for and
         find Applicants that would be a good fit for their job posting based on the job's requirements and description.
 
-    STEP 5-A:
+    STEP 4-A:
         For this task you will need to choose how to implement simple search for applicants and employers. In addition to the data classes
         you've already looked at, we've provided most of the implementation for simple search below. Your task is to choose between two methods
         of implementation: keyword search and full-text search. Be sure to think about --why-- you're making the choice you are and consider
@@ -39,6 +39,7 @@ from data.helper_classes import *
 '''
 class SimpleSearch:
 
+    #NOTE: You're welcome to add to or change these dictionaries, please leave a comment if you do though!
     APPLICANT_SEARCH_KEYWORD_DICT = {
         "field" : ["Medicine", "Tech", "Business", "Finance", "Law", "Administration", "Education", "Other"],
         "type" : ["Volunteer", "Internship", "Part-Time", "Full-Time", "Other"],
@@ -56,7 +57,12 @@ class SimpleSearch:
     }
 
 
-    #TODO: Fill in the 
+    '''TODO: Fill in the arguments and implementation of these keyword and full text functions based on 
+             your REQ-A and REQ-B implementations' needs. do_keyword_search and do_full_text_search headers are
+             provided here to encourage you to think about what exactly each function will need to conduct its
+             search and how those things my differ for REQ-A and REQ-B. It's NOT required that you fill in either of these,
+             but you will probably end up filling in one.
+    '''
     def do_keyword_search(self, ___):
         results = ...
         return results

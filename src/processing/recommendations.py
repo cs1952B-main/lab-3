@@ -1,3 +1,4 @@
+from data.helper_classes import *
 '''
 TODO: 
 
@@ -9,7 +10,7 @@ TODO:
            it should make useful and fair tailored recommendations to the Employer of a few Applicants who have active profiles on the platform 
            whom they may be interested in reaching out to.
 
-    STEP 5-B: 
+    STEP 4-B: 
         For this task you will first want to define what makes a recommendation "useful" and "fair" for HireSense's purposes. You can do this
         explicitly in a "REFLECTION:" comment or just have it in your mind as you code. Be sure to have some sense though, it will help you
         on your written questions later on. 
@@ -41,7 +42,7 @@ TODO:
         NOTE: These are not rigid options, you can combine or reinterpret them as you see fit. You can also choose to use the UserPreferences class
         regardless of how you implement the recommendations if you think it will prove useful.
 
-        HINT: Remember that we don't expect you to write functional code, if you don't know how to do something or how to implement a piece of
+        NOTE: Remember that we don't expect you to write functional code, if you don't know how to do something or how to implement a piece of
         your recommendation algorithm or want to make a fake call to a method, use pseudocode! Just make sure whatever you are doing is clear
         and be sure to specify what and how a pseudocoded section might accomplish its task, even if you can't write the code that would 
         actually do it.
@@ -50,11 +51,11 @@ TODO:
 
 class Recommender: 
     
-    #TODO: Fill in this method with an implementation that satisfies functionality REQ-C
+    #TODO: Fill in the arguments and method with an implementation that satisfies functionality REQ-C
     def recommend_employers_to_applicant(self, ___):
         pass
 
-    #TODO: Fill in this method with an implementation that satisfies functionality REQ-D
+    #TODO: Fill in the arguments and method with an implementation that satisfies functionality REQ-D
     def recommend_applicants_to_employers(self, ___):
         pass
 

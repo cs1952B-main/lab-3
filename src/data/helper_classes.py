@@ -8,18 +8,17 @@ class ApplicationStatus(Enum):
     DRAFTING = 0
     RECEIVED = 1
     REVIEWED = 2
-    HIRED = 3
-    REJECTED = 4
+    OFFERED = 3
+    HIRED = 4
+    DECLINED = 5
+    REJECTED = 6
 
-#TODO: Is there a better word than type to represent this.... ?
 class JobType(Enum):
     VOLUNTEER_WORK = 0
     INTERNSHIP = 1
     PART_TIME = 2
     FULL_TIME = 3
     OTHER = 4
-
-#TODO: Might want to make a more fleshed out class for location
 
 class DegreeLevel(Enum):
     BELOW_HIGHSCHOOL = 0
@@ -71,7 +70,7 @@ class Company:
 
 # -------------------------------------------------------------------------------------------------- #
 
-#NOTE: ONLY FILL THIS IN IF YOU NEED IT FOR YOUR RECOMMENDATIONS IN STEP 5, see recommendations.py for more details
+#NOTE: ONLY FILL THIS IN IF YOU NEED IT FOR YOUR RECOMMENDATIONS IN STEP 4-B, see recommendations.py for more details
 '''
     Fill in this class with any attributes/fields you think would be helpful data to collect!
     We have also provided separate classes for applicant and employer which inherit from the UserInteractions class if you'd like
