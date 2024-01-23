@@ -7,11 +7,11 @@ from helper_classes import *
     each Position represents a single job on the platform. In short, you can think of a Position as a 
     a role within a larger company or within a small business.
 
-    Company - the larger Company to which the Employer belongs
+    Company - the larger Company to which the Position belongs
     SalaryInfo - the low, high, and median salary for this position
     JobDescription - background info about the job: job title, type, field, location, responsibilities, etc
     JobRequirements - requirements for applicants to the role: degree level, field of study, years of experience, etc
-    ApplicationsReceived - a wrapper class around a set of applications received by the employer
+    ApplicationsReceived - a wrapper class around a set of applications received by for the position
 '''
 
 class Position:
