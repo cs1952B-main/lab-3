@@ -1,8 +1,8 @@
 from enum import Enum
 from data.applicant.applicant import Applicant
-from data.employer.employer import Employer
+from data.position.position import Position
 
-# Shared classes that will need to be used by both applicants and employers data class implementations
+# Shared classes that will need to be used by both applicants and positions data class implementations
 
 class ApplicationStatus(Enum):
     DRAFTING = 0
@@ -34,15 +34,15 @@ class DegreeLevel(Enum):
   as well as the date it was sent and the application status.
 
   Applicant - the applicant whose application this is
-  Employer - the employer who is receiving the application for their job posting
+  Position - the job recieving the applicant's application
   date - the date the application was sent in
   app_status - where the application is in the hiring process
   
 ''' 
 class Application:
-    def __init__(self, applicant : Applicant, employer : Employer, date, app_status : ApplicationStatus):
+    def __init__(self, applicant : Applicant, position : Position, date, app_status : ApplicationStatus):
         self.applicant = applicant
-        self.employer = employer
+        self.position = position
         self.date = date
         self.status = app_status
 
@@ -54,18 +54,18 @@ class Application:
   name - the name of the company
   size - the number of employees working for the company
   location - the location of the main office/headquarters of the company
-  employees_with_jobs_posted - a set of Employers that work for the company with job postings on HireSense
+  positions_posted - a set of Positions within the Company that have postings on HireSense
   
 '''   
 class Company:
-    def __init__(self, name, size, location, employees_with_jobs_posted: set[Employer]):
+    def __init__(self, name, size, location, positions_posted: set[Position]):
         self.name = name
         self.size = size
         self.location = location
-        self.employees_with_jobs_posted = employees_with_jobs_posted
+        self.positions_posted = positions_posted
     
-    def addEmployeeJobPosting(self, employee : Employer):
-        self.employees_with_jobs_posted.add(employee)
+    def addPositionPosting(self, posting : Position):
+        self.positions_posted.add(posting)
 
 
 # -------------------------------------------------------------------------------------------------- #
@@ -74,7 +74,7 @@ class Company:
 '''
     Fill in this class with any attributes/fields you think would be helpful data to collect!
     We have also provided separate classes for applicant and employer which inherit from the UserInteractions class if you'd like
-    To collect some Applicant/Employer specific metrics 
+    To collect some Applicant/Position specific metrics 
 '''
 class UserInteractions:
     def __init___(self, ____):
@@ -86,7 +86,7 @@ class UserInteractions:
 #         super().__init___(____) #call to the parent class, pass the UserInteractions arguments (if there are any) here!
 #         #insert Applicant specific interation attributes here
 
-# class EmployerUserInteractions(UserInteractions):
+# class PositionUserInteractions(UserInteractions):
 #     def __init___(self, ____):
 #         super().__init___(____) #call to the parent class, pass the UserInteractions arguments (if there are any) here!
-#         #insert Employer specific interation attributes here
+#         #insert Position specific interation attributes here
