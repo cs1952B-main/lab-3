@@ -15,7 +15,7 @@ TODO:
 
     STEP 4-C: 
     For this task, you will need to choose how to process and represent data that HireSense ordinarily collects to assist 
-    Applicants and Employers in finding a good fit to instead analyze and attempt to better and promote equitable hiring practices
+    Applicants and open Positions in finding a good fit to instead analyze and attempt to better and promote equitable hiring practices
     within Companies. 
     
     You will need to decide what kind of characteristics to include to try to measure equity, how to report this to a
