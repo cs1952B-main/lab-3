@@ -7,9 +7,9 @@ The data classes are all located inside src -> data
 1) src -> data -> applicant contains the Applicant data class as well as Applicant specific helper classes that essentially serve as containers
 for different types of information included in the Applicant profile
 
-2) src -> data -> employer contains the Employer data class as well as Employer specific helper classes that serve as contains for different types of information included in the Employer profile/job posting
+2) src -> data -> position contains the Position data class as well as Position specific helper classes that serve as contains for different types of information included in the posting for that Position 
 
-3) src -> data -> helper_classes.py contains helper classes used by both the Applicant and Employer classes like Application or Company
+3) src -> data -> helper_classes.py contains helper classes used by both the Applicant and Position classes like Application or Company
 
 ## Processing Files
 
