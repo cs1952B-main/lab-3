@@ -4,18 +4,18 @@ TODO:
 
     FUNCTIONALITY REQUIREMENT:
     REQ-C: HireSense should ingest information it knows about an Applicant, then using this information (and perhaps other relevant information
-           on the platform) it should make useful and fair tailored recommendations to the Applicant of a few Employers who have posted a job they might
+           on the platform) it should make useful and fair tailored recommendations to the Applicant of a few Positions they might
            find interesting.
-    REQ-D: HireSense should ingest information it knows about the job an Employer posted then using this information (and other relevant information)
-           it should make useful and fair tailored recommendations to the Employer of a few Applicants who have active profiles on the platform 
+    REQ-D: HireSense should ingest information it knows about the Position posted then using this information (and other relevant information)
+           it should make useful and fair tailored recommendations for that Position of a few Applicants who have active profiles on the platform 
            whom they may be interested in reaching out to.
 
     STEP 4-B: 
         For this task you will first want to define what makes a recommendation "useful" and "fair" for HireSense's purposes. You can do this
-        explicitly in a "REFLECTION:" comment or just have it in your mind as you code. Be sure to have some sense though, it will help you
+        explicitly in a "ANNOTATION:" comment or just have it in your mind as you code. Be sure to have some sense though, it will help you
         on your written questions later on. 
 
-        You'll want to think about what Applicant and Employer data to use in your recommendations. What best represents reality? 
+        You'll want to think about what Applicant and Position data to use in your recommendations. What best represents reality? 
         Could using certain data points open the door for discrimination? Could your algorithm reflect an unfair bias? Next you'll want 
         to choose a method for the recommendation system, we've provided a few ideas for you to choose from, though you may use something 
         else as long as it's clear from your code how the system establishes connections between data points, what data points it is using,
@@ -23,8 +23,8 @@ TODO:
 
         Some potential recommendation algorithms to explore:
 
-            a) A simple if-then system which ingests "immutable" attributes of an Applicant/Employer profile to filter
-            through recommended Employers/Applicants. Essentially, this would have hard-coded rules on how to filter through 
+            a) A simple if-then system which ingests "immutable" attributes of an Applicant/Position profile to filter
+            through recommended Positions/Applicants. Essentially, this would have hard-coded rules on how to filter through 
             and intelligently provide recommendations. This kind of system gives you as the programmer the most control over and 
             insight into how the code reaches it's decisions.
 
@@ -34,7 +34,7 @@ TODO:
             kinds of user interaction data you will collect (ex: fields most viewed, time spent on a profile, # of times a profile is visited, etc.).
 
             c) A more complex collaborative filtering recommendations system which matches users to "similar" users based on key profile and/or interaction 
-            characteristics, examines the past outcomes of "similar" users, and leverages these connections to make recommendations to Applicants/Employers.
+            characteristics, examines the past outcomes of "similar" users, and leverages these connections to make recommendations to Applicants/Positions.
 
             d) Other! If you think you have a better method, feel free to implement it so long as it is clear (and perhaps commented) so that we can 
             understand what data it is using, how it is using that data, and what the recommendations are based on.
@@ -52,11 +52,11 @@ TODO:
 class Recommender: 
     
     #TODO: Fill in the arguments and method with an implementation that satisfies functionality REQ-C
-    def recommend_employers_to_applicant(self, ___):
+    def recommend_positions_to_applicant(self, ___):
         pass
 
     #TODO: Fill in the arguments and method with an implementation that satisfies functionality REQ-D
-    def recommend_applicants_to_employers(self, ___):
+    def recommend_applicants_to_positions(self, ___):
         pass
 
 
