@@ -30,7 +30,7 @@ class DegreeLevel(Enum):
 
 
 '''
-  This class represents the Applicant's application to an Employer’s position. It contains both the Applicant and Employer
+  This class represents the Applicant's application to a Position. It contains both the Applicant and Position
   as well as the date it was sent and the application status.
 
   Applicant - the applicant whose application this is
@@ -47,9 +47,9 @@ class Application:
         self.status = app_status
 
 '''
-  The Company class represents the larger company where employers work. The class contains information about the company name, size, location,
-  and a list of company employees who are currently posting jobs on the HireSense platform. When HireSense does equitable hiring analyses,
-  they do it at the Company level, not the Employer level.
+  The Company class represents the larger company where positions are held. The class contains information about the company name, size, location,
+  and a list of company positions that are currently open and being posted on the HireSense platform. When HireSense does equitable hiring analyses,
+  they do it at the Company level, not the Position level.
 
   name - the name of the company
   size - the number of employees working for the company
@@ -73,7 +73,7 @@ class Company:
 #NOTE: ONLY FILL THIS IN IF YOU NEED IT FOR YOUR RECOMMENDATIONS IN STEP 4-B, see recommendations.py for more details
 '''
     Fill in this class with any attributes/fields you think would be helpful data to collect!
-    We have also provided separate classes for applicant and employer which inherit from the UserInteractions class if you'd like
+    We have also provided separate classes for applicant and position which inherit from the UserInteractions class if you'd like
     To collect some Applicant/Position specific metrics 
 '''
 class UserInteractions:
